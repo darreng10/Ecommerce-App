@@ -1,0 +1,113 @@
+Started by user Darren Greene
+Running as SYSTEM
+Building in workspace C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential ac621c17-f432-446a-a5a2-5161f453457b
+Cloning the remote Git repository
+Cloning repository https://github.com/darreng10/Ecommerce-App.git/
+ > git.exe init C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild # timeout=10
+Fetching upstream changes from https://github.com/darreng10/Ecommerce-App.git/
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.29.2.windows.2'
+using GIT_ASKPASS to set credentials 
+ > git.exe fetch --tags --force --progress -- https://github.com/darreng10/Ecommerce-App.git/ +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/darreng10/Ecommerce-App.git/ # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/Jenkins_build^{commit}" # timeout=10
+Checking out Revision 2bc15d0a16a63d23ef7dee68affd020fa47adad1 (refs/remotes/origin/Jenkins_build)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 2bc15d0a16a63d23ef7dee68affd020fa47adad1 # timeout=10
+Commit message: "pom file change"
+ > git.exe rev-list --no-walk 2bc15d0a16a63d23ef7dee68affd020fa47adad1 # timeout=10
+[mavenBuild] $ cmd.exe /C "C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven_3.8.1\bin\mvn.cmd -f starter_code/pom.xml clean compile package && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ auth-course ---
+[INFO] Deleting C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\test-classes
+[INFO] /C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/mavenBuild/starter_code/src/test/java/com/example/demo/controllers/OrderControllerTest.java: Some input files use or override a deprecated API.
+[INFO] /C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/mavenBuild/starter_code/src/test/java/com/example/demo/controllers/OrderControllerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12:test (default-test) @ auth-course ---
+[INFO] Surefire report directory: C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.example.demo.controllers.CartControllerTest
+21:05:23.168 [main] INFO com.example.demo.controllers.CartController - Item has been added to cart
+21:05:23.187 [main] INFO com.example.demo.controllers.CartController - Item has been added to cart
+21:05:23.187 [main] INFO com.example.demo.controllers.CartController - cart updated - item removed
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.671 sec
+Running com.example.demo.controllers.ItemControllerTest
+21:05:23.216 [main] INFO com.example.demo.controllers.ItemController - return items by it's name
+21:05:23.218 [main] INFO com.example.demo.controllers.ItemController - getItemById: Optional[com.example.demo.model.persistence.Item@1f]
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.example.demo.controllers.OrderControllerTest
+21:05:23.267 [main] INFO com.example.demo.controllers.OrderController - order submitted
+21:05:23.269 [main] INFO com.example.demo.controllers.OrderController - User not found
+21:05:23.270 [main] INFO com.example.demo.controllers.OrderController - User not found
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+Running com.example.demo.controllers.UserControllerTest
+21:05:23.286 [main] INFO com.example.demo.controllers.UserController - creating new user
+21:05:23.289 [main] INFO com.example.demo.controllers.UserController - creating new user
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+
+Results :
+
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ auth-course ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [479 msecs]
+[INFO] Building war: C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\auth-course-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.132 s
+[INFO] Finished at: 2021-04-26T21:05:25+01:00
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context rps
+  [C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\auth-course-0.0.1-SNAPSHOT.war] is not deployed. Doing a fresh deployment.
+  Deploying [C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\mavenBuild\starter_code\target\auth-course-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS
