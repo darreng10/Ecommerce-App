@@ -80,6 +80,7 @@
 				<version>2.19.1</version>
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
+					<argLine>-Xmx512m</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
